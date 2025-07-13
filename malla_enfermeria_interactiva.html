@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malla Curricular Enfermería</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      color: #2e6da4;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .semestre {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1rem;
+    }
+    .semestre h2 {
+      margin-top: 0;
+      color: #337ab7;
+      text-align: center;
+    }
+    .ramo {
+      padding: 0.5rem;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .ramo:hover {
+      opacity: 0.9;
+    }
+    .aprobado {
+      background-color: #d0f0c0;
+    }
+    .cursando {
+      background-color: #fff3cd;
+    }
+    .pendiente {
+      background-color: #f8d7da;
+    }
+  </style>
+</head>
+<body>
+  <h1>Malla Curricular - Enfermería (U. Autónoma)</h1>
+  <div class="grid">
+    <!-- Semestres -->
+    <div class="semestre">
+      <h2>1° Semestre</h2>
+      <div class="ramo pendiente" title="Descripción o info del ramo">Anatomía I</div>
+      <div class="ramo pendiente" title="">Bioquímica</div>
+      <div class="ramo pendiente" title="">Fundamentos de Enfermería</div>
+      <div class="ramo pendiente" title="">Comunicación en Salud</div>
+    </div>
+    <div class="semestre">
+      <h2>2° Semestre</h2>
+      <div class="ramo pendiente" title="">Anatomía II</div>
+      <div class="ramo pendiente" title="">Fisiología</div>
+      <div class="ramo pendiente" title="">Enfermería del Adulto I</div>
+      <div class="ramo pendiente" title="">Microbiología</div>
+    </div>
+    <!-- Puedes seguir duplicando esto hasta el 10° semestre -->
+  </div>
+</body>
+</html>
