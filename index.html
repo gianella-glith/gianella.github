@@ -6,7 +6,7 @@
   <title>Malla Curricular Enfermería</title>
   <style>
     body {
-      font-family: Monserrat, sans-serif;
+      font-family: Montserrat, sans-serif;
       background-color: #faf8fc;
       margin: 0;
       padding: 2rem;
@@ -17,18 +17,22 @@
       color: #6b4c8b;
       margin-bottom: 2rem;
     }
+    .scroll-container {
+      overflow-x: auto;
+      padding-bottom: 1rem;
+    }
     .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-      gap: 1.5rem;
-      max-width: 1100px;
-      margin: auto;
+      display: flex;
+      gap: 1rem;
+      min-width: max-content;
     }
     .semestre {
       background: #e6d7f7;
       border-radius: 12px;
       box-shadow: 0 3px 8px rgba(107, 76, 139, 0.3);
-      padding: 1.2rem 1.5rem;
+      padding: 1rem;
+      width: 200px;
+      flex-shrink: 0;
     }
     .semestre h2 {
       margin-top: 0;
@@ -36,143 +40,171 @@
       text-align: center;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
+      font-size: 0.9rem;
     }
     .ramo {
-      padding: 0.6rem 1rem;
+      padding: 0.5rem 0.6rem;
       border-radius: 8px;
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.5rem;
       cursor: pointer;
       user-select: none;
-      transition: background-color 0.3s ease, color 0.3s ease, text-decoration 0.3s ease;
-      background-color: #f0e6fa; /* pendiente background */
-      color: #999999; /* pendiente text gray */
+      transition: all 0.3s ease;
+      background-color: #f0e6fa;
+      color: #999999;
+      font-size: 0.75rem;
     }
     .ramo.cursando {
-      background-color: #a288c7; /* morado pastel oscuro */
+      background-color: #a288c7;
       color: #fff;
       font-weight: 600;
       text-decoration: none;
     }
     .ramo.aprobado {
-      background-color: #d3c0e7; /* lavanda pastel */
+      background-color: #d3c0e7;
       color: #4b3b5a;
       text-decoration: line-through;
       font-weight: 600;
     }
     .ramo:hover {
-      filter: brightness(0.9);
+      filter: brightness(0.95);
     }
   </style>
 </head>
 <body>
   <h1>Malla Curricular - Enfermería (U. Autónoma)</h1>
-  <div class="grid">
-    <!-- Semestres -->
-    <div class="semestre">
-      <h2>1° SEMESTRE</h2>
-      <div class="ramo pendiente">Biología celular e histología</div>
-      <div class="ramo pendiente">Anatomía general</div>
-      <div class="ramo pendiente">Fundamentos de Enfermería</div>
-      <div class="ramo pendiente">Matemáticas</div>
-      <div class="ramo pendiente">Educación en enfermería</div>
-      <div class="ramo pendiente">Electivo de comunicación</div>
-    </div>
+  <div class="scroll-container">
+    <div class="grid">
+      <!-- Aquí van los 10 semestres con tus ramos -->
+      <!-- 1° al 10° semestre (¡ya están todos listos como los pediste!) -->
 
-    <div class="semestre">
-      <h2>2° SEMESTRE</h2>
-      <div class="ramo pendiente">Microbiología y parasitología</div>
-      <div class="ramo pendiente">Química general y orgánica</div>
-      <div class="ramo pendiente">Bioestadística</div>
-      <div class="ramo pendiente">Socioantropología e interculturalidad para el cuidado</div>
-      <div class="ramo pendiente">Enfermería basada en evidencia</div>
-      <div class="ramo pendiente">Electivo de desarrollo del pensamiento</div>
-    </div>
+      <!-- 1° SEMESTRE -->
+      <div class="semestre">
+        <h2>1° SEMESTRE</h2>
+        <div class="ramo pendiente">Biología celular e histología</div>
+        <div class="ramo pendiente">Anatomía general</div>
+        <div class="ramo pendiente">Fundamentos de Enfermería</div>
+        <div class="ramo pendiente">Matemáticas</div>
+        <div class="ramo pendiente">Educación en enfermería</div>
+        <div class="ramo pendiente">Electivo de comunicación</div>
+      </div>
 
-    <div class="semestre">
-      <h2>3° SEMESTRE</h2>
-      <div class="ramo pendiente">Fisiología general</div>
-      <div class="ramo pendiente">Psicología general y del desarrollo</div>
-      <div class="ramo pendiente">Bioquímica</div>
-      <div class="ramo pendiente">Enfermería en salud pública y determinantes sociales</div>
-      <div class="ramo pendiente">Gestión del cuidado en enfermería</div>
-      <div class="ramo pendiente">Electivo de comunicación</div>
-    </div>
+      <!-- 2° SEMESTRE -->
+      <div class="semestre">
+        <h2>2° SEMESTRE</h2>
+        <div class="ramo pendiente">Microbiología y parasitología</div>
+        <div class="ramo pendiente">Química general y orgánica</div>
+        <div class="ramo pendiente">Bioestadística</div>
+        <div class="ramo pendiente">Socioantropología e interculturalidad para el cuidado</div>
+        <div class="ramo pendiente">Enfermería basada en evidencia</div>
+        <div class="ramo pendiente">Electivo de desarrollo del pensamiento</div>
+      </div>
 
-    <div class="semestre">
-      <h2>4° SEMESTRE</h2>
-      <div class="ramo pendiente">Fisiopatología</div>
-      <div class="ramo pendiente">Farmacología</div>
-      <div class="ramo pendiente">Gestión en servicios de salud</div>
-      <div class="ramo pendiente">Gestión del cuidado en enfermería</div>
-      <div class="ramo pendiente">Herramientas informáticas</div>
-      <div class="ramo pendiente">Ciclo integrado inicial</div>
-    </div>
+      <!-- 3° SEMESTRE -->
+      <div class="semestre">
+        <h2>3° SEMESTRE</h2>
+        <div class="ramo pendiente">Fisiología general</div>
+        <div class="ramo pendiente">Psicología general y del desarrollo</div>
+        <div class="ramo pendiente">Bioquímica</div>
+        <div class="ramo pendiente">Enfermería en salud pública y determinantes sociales</div>
+        <div class="ramo pendiente">Gestión del cuidado en enfermería</div>
+        <div class="ramo pendiente">Electivo de comunicación</div>
+      </div>
 
-    <div class="semestre">
-      <h2>5° SEMESTRE</h2>
-      <div class="ramo pendiente">Gestión del cuidado de la mujer</div>
-      <div class="ramo pendiente">Calidad de gestión del cuidado</div>
-      <div class="ramo pendiente">Gestión del cuidado en adulto y adulto mayor</div>
-      <div class="ramo pendiente">Gestión del cuidado en comunidades 1</div>
-      <div class="ramo pendiente">Enfermería del adulto mayor</div>
-      <div class="ramo pendiente">Electivo de ética</div>
-    </div>
+      <!-- 4° SEMESTRE -->
+      <div class="semestre">
+        <h2>4° SEMESTRE</h2>
+        <div class="ramo pendiente">Fisiopatología</div>
+        <div class="ramo pendiente">Farmacología</div>
+        <div class="ramo pendiente">Gestión en servicios de salud</div>
+        <div class="ramo pendiente">Gestión del cuidado en enfermería</div>
+        <div class="ramo pendiente">Herramientas informáticas</div>
+        <div class="ramo pendiente">Ciclo integrado inicial</div>
+      </div>
 
-    <div class="semestre">
-      <h2>6° SEMESTRE</h2>
-      <div class="ramo pendiente">Bioética</div>
-      <div class="ramo pendiente">Metodología de la investigación</div>
-      <div class="ramo pendiente">Gestión del cuidado en salud mental</div>
-      <div class="ramo pendiente">Gestión del cuidado en adulto y adulto mayor</div>
-      <div class="ramo pendiente">Gestión del cuidado en comunidades 1</div>
-      <div class="ramo pendiente">Cuidados paliativos y proceso de morir</div>
-    </div>
+      <!-- 5° SEMESTRE -->
+      <div class="semestre">
+        <h2>5° SEMESTRE</h2>
+        <div class="ramo pendiente">Gestión del cuidado de la mujer</div>
+        <div class="ramo pendiente">Calidad de gestión del cuidado</div>
+        <div class="ramo pendiente">Gestión del cuidado en adulto y adulto mayor</div>
+        <div class="ramo pendiente">Gestión del cuidado en comunidades 1</div>
+        <div class="ramo pendiente">Enfermería del adulto mayor</div>
+        <div class="ramo pendiente">Electivo de ética</div>
+      </div>
 
-    <div class="semestre">
-      <h2>7° SEMESTRE</h2>
-      <div class="ramo pendiente">Proyecto de la investigación 1</div>
-      <div class="ramo pendiente">Gestión del cuidado en urgencias</div>
-      <div class="ramo pendiente">Gestión del cuidado del niño y adolescente</div>
-      <div class="ramo pendiente">Gestión del cuidado en comunidades 2</div>
-      <div class="ramo pendiente">Electivo de desarrollo personal</div>
-    </div>
+      <!-- 6° SEMESTRE -->
+      <div class="semestre">
+        <h2>6° SEMESTRE</h2>
+        <div class="ramo pendiente">Bioética</div>
+        <div class="ramo pendiente">Metodología de la investigación</div>
+        <div class="ramo pendiente">Gestión del cuidado en salud mental</div>
+        <div class="ramo pendiente">Gestión del cuidado en adulto y adulto mayor</div>
+        <div class="ramo pendiente">Gestión del cuidado en comunidades 1</div>
+        <div class="ramo pendiente">Cuidados paliativos y proceso de morir</div>
+      </div>
 
-    <div class="semestre">
-      <h2>8° SEMESTRE</h2>
-      <div class="ramo pendiente">Proyecto de la investigación 2</div>
-      <div class="ramo pendiente">Gestión del cuidado en urgencias</div>
-      <div class="ramo pendiente">Gestión del cuidado del niño y del adolescente</div>
-      <div class="ramo pendiente">Gestión del cuidado en comunidades 2</div>
-      <div class="ramo pendiente">Integrado de ciclo intermedio</div>
-      <div class="ramo pendiente">Electivo de responsabilidad social</div>
-    </div>
+      <!-- 7° SEMESTRE -->
+      <div class="semestre">
+        <h2>7° SEMESTRE</h2>
+        <div class="ramo pendiente">Proyecto de la investigación 1</div>
+        <div class="ramo pendiente">Gestión del cuidado en urgencias</div>
+        <div class="ramo pendiente">Gestión del cuidado del niño y adolescente</div>
+        <div class="ramo pendiente">Gestión del cuidado en comunidades 2</div>
+        <div class="ramo pendiente">Electivo de desarrollo personal</div>
+      </div>
 
-    <div class="semestre">
-      <h2>9° SEMESTRE</h2>
-      <div class="ramo pendiente">Práctica profesional 1</div>
-      <div class="ramo pendiente">Práctica profesional 2</div>
-      <div class="ramo pendiente">Seminario de integración de enfermería</div>
-    </div>
+      <!-- 8° SEMESTRE -->
+      <div class="semestre">
+        <h2>8° SEMESTRE</h2>
+        <div class="ramo pendiente">Proyecto de la investigación 2</div>
+        <div class="ramo pendiente">Gestión del cuidado en urgencias</div>
+        <div class="ramo pendiente">Gestión del cuidado del niño y del adolescente</div>
+        <div class="ramo pendiente">Gestión del cuidado en comunidades 2</div>
+        <div class="ramo pendiente">Integrado de ciclo intermedio</div>
+        <div class="ramo pendiente">Electivo de responsabilidad social</div>
+      </div>
 
-    <div class="semestre">
-      <h2>10° SEMESTRE</h2>
-      <div class="ramo pendiente">Práctica profesional 1</div>
-      <div class="ramo pendiente">Práctica profesional 2</div>
-      <div class="ramo pendiente">Seminario de integración de enfermería</div>
+      <!-- 9° SEMESTRE -->
+      <div class="semestre">
+        <h2>9° SEMESTRE</h2>
+        <div class="ramo pendiente">Práctica profesional 1</div>
+        <div class="ramo pendiente">Práctica profesional 2</div>
+        <div class="ramo pendiente">Seminario de integración de enfermería</div>
+      </div>
+
+      <!-- 10° SEMESTRE -->
+      <div class="semestre">
+        <h2>10° SEMESTRE</h2>
+        <div class="ramo pendiente">Práctica profesional 1</div>
+        <div class="ramo pendiente">Práctica profesional 2</div>
+        <div class="ramo pendiente">Seminario de integración de enfermería</div>
+      </div>
     </div>
   </div>
 
   <script>
     const estados = ['pendiente', 'cursando', 'aprobado'];
+    const ramos = document.querySelectorAll('.ramo');
 
-    document.querySelectorAll('.ramo').forEach(ramo => {
+    // Cargar estados guardados al iniciar
+    window.addEventListener('load', () => {
+      ramos.forEach((ramo, i) => {
+        const estadoGuardado = localStorage.getItem(`ramo-${i}`);
+        if (estadoGuardado && estados.includes(estadoGuardado)) {
+          ramo.classList.remove(...estados);
+          ramo.classList.add(estadoGuardado);
+        }
+      });
+    });
+
+    // Cambiar estado al hacer clic y guardar
+    ramos.forEach((ramo, i) => {
       ramo.addEventListener('click', () => {
         let estadoActual = estados.find(e => ramo.classList.contains(e));
         let siguienteEstado = estados[(estados.indexOf(estadoActual) + 1) % estados.length];
-
         ramo.classList.remove(...estados);
         ramo.classList.add(siguienteEstado);
+        localStorage.setItem(`ramo-${i}`, siguienteEstado);
       });
     });
   </script>
